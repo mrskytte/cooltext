@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  margin: 5rem;
+}
+
+.fadetext {
+  display: inline-block;
+  --delay: 1;
+  --length: 1;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeFromBottom calc(var(--length) * 0.02s)
+    cubic-bezier(0.54, 0.57, 0.63, 1.89) calc(var(--delay) * 0.02s) forwards;
+}
+
+.space {
+  display: inline;
+}
+
+@keyframes fadeFromBottom {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
